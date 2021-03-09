@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include agency_management *.css
+recursive-include agency_management *.csv
+recursive-include agency_management *.html
+recursive-include agency_management *.ico
+recursive-include agency_management *.js
+recursive-include agency_management *.json
+recursive-include agency_management *.md
+recursive-include agency_management *.png
+recursive-include agency_management *.py
+recursive-include agency_management *.svg
+recursive-include agency_management *.txt
+recursive-exclude agency_management *.pyc
