@@ -13,7 +13,7 @@ app_license = "MIT"
 
 
 # Added fixtures of print formats, reports
-fixtures = ["report","print_format"]
+fixtures = ["Report","Print Format"]
 # Includes in <head>
 # ------------------
 
