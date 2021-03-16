@@ -11,6 +11,9 @@ app_color = "grey"
 app_email = "patilruturaj31098@gmail.com"
 app_license = "MIT"
 
+
+# Added fixtures of print formats, reports
+fixtures = ["report","print_format"]
 # Includes in <head>
 # ------------------
 
