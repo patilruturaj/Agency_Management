@@ -1,0 +1,74 @@
+<div>
+    <div class='col-xs-12'>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Quotaion To
+                    </th>
+                    <th>
+                        Customer
+                    </th>
+                    <th>
+                        transaction Date
+                    </th>
+                    <th>
+                        Shift
+                    </th>
+                    <th>
+                        Valid Till
+                    </th>
+                    <th>
+                        Contact
+                    </th>
+                    <th>
+                        Total
+                    </th>
+                    <th>
+                        Tax
+                    </th>
+                    <th>
+                        Grand Total
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records%}
+                <tr>
+                    <td>
+                        {{record.quotation_to}}
+                    </td>
+                    <td>
+                        {{record.customer_name}}
+                    </td>
+                    <td>
+                        {{record.transaction_date}}
+                    </td>
+                    <td>
+                        {{record.shift}}
+                    </td>
+                    <td>
+                        {{record.valid_till}}
+                    </td>
+                    <td>
+                        {{record.contact_mobile}}
+                    </td>
+                    <td>
+                        {{record.total}}
+                    </td>
+                    <td>
+                        {{record.total_taxes_and_charges}}
+                    </td>
+                    <td>
+                        {{record.grand_total}}
+                    </td>
+                </tr>
+                {%endfor%}
+
+            </tbody>
+            
+
+        </table>
+
+    </div>
+</div> 

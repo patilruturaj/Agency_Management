@@ -13,7 +13,9 @@ app_license = "MIT"
 
 
 # Added fixtures of print formats, reports
-fixtures = ["Report","Print Format"]
+fixtures = ["Custom Field","Report","Print Format"]
+
+
 # Includes in <head>
 # ------------------
 

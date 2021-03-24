@@ -5208,6 +5208,16 @@
     "width": 0
    },
    {
+    "fieldname": "shift",
+    "fieldtype": "Data",
+    "label": "Shift",
+    "options": null,
+    "parent": "Quotation datewise Report",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
     "fieldname": "vaild_till",
     "fieldtype": "Date",
     "label": "Valid Till",
@@ -5275,11 +5285,33 @@
     "wildcard_filter": 0
    },
    {
+    "fieldname": "from_shift",
+    "fieldtype": "Select",
+    "label": "Shift",
+    "mandatory": 1,
+    "options": "Morning\nEvening",
+    "parent": "Quotation datewise Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
     "fieldname": "to_date",
     "fieldtype": "Check",
     "label": "To date",
     "mandatory": 1,
     "options": null,
+    "parent": "Quotation datewise Report",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "fieldname": "to_shift",
+    "fieldtype": "Select",
+    "label": "Shift",
+    "mandatory": 1,
+    "options": "Morning\nEvening",
     "parent": "Quotation datewise Report",
     "parentfield": "filters",
     "parenttype": "Report",
@@ -5290,7 +5322,7 @@
   "javascript": null,
   "json": null,
   "letter_head": "Main Letter head",
-  "modified": "2021-03-16 18:04:33.619652",
+  "modified": "2021-03-22 11:36:21.338079",
   "module": "Agency Management",
   "name": "Quotation datewise Report",
   "parent": null,

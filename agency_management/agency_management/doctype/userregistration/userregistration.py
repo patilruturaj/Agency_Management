@@ -7,11 +7,13 @@ import frappe
 from frappe.model.document import Document
 
 class UserRegistration(Document):
+	
 	def on_update(self):
 		if self.status=="Opportunity":
 			self.create_new_opportunity()
 		elif self.status=="Customer":
 			self.create_new_customer()
+
 	def before_insert(self):
 		lead_info=frappe.db.exists({"doctype":"Lead","email_id":self.email_id})
 
@@ -30,6 +32,7 @@ class UserRegistration(Document):
 		validate_mail_id_is_unique(self.email_id)
 		user_password=self.first_name+"@123"
 		print("\n\n\n"+user_password+"\n\n\n")
+		
 		new_user=frappe.get_doc({
 			"doctype":"User",
 			"email":self.email_id,
@@ -37,10 +40,9 @@ class UserRegistration(Document):
 			"send_welcome_email":0,
 			"new_password":user_password
 		})
+		new_user.flags.ignore_permission=True
 		new_user.insert()
-		print("\n\n\n User Created \n\n\n")
 		send_welcome_email(self.email_id,self.first_name,user_password)
-		# frappe.throw("User is created")
 
 	def create_new_lead(self):
 		personal_name=self.first_name+" "+self.last_name
@@ -61,7 +63,6 @@ class UserRegistration(Document):
 		})
 		new_lead.insert()
 		print("\n\n\n Lead Created \n\n\n")
-		# frappe.throw("Lead is created")
 	
 	def create_new_opportunity(self):
 		lead_info=frappe.db.exists({"doctype":"Lead","email_id":self.email_id})
@@ -141,13 +142,8 @@ def send_welcome_email(rec_email,rec_name,rec_password):
 	frappe.msgprint("Email Sent")
 
 
-
-
-
-
 @frappe.whitelist()
 def featch_item_name(item_group):
-
 	items=frappe.db.sql("""select item_name from `tabItem` where item_group=%s""",item_group,as_dict=1)
 	print(items)
 	return items

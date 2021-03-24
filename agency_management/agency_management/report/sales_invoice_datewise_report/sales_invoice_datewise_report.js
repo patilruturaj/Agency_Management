@@ -10,13 +10,13 @@ frappe.query_reports["Sales Invoice datewise report"] = {
 			"label": "From Date",
 			"mandatory": 1,
 			"wildcard_filter": 0
-		   },
-		   {
+		},
+		{
 			"fieldname": "to_date",
 			"fieldtype": "Date",
 			"label": "To Date",
 			"mandatory": 1,
 			"wildcard_filter": 0
-		   }
+		}
 	]
 };

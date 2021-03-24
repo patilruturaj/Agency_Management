@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2021-03-22 13:37:51.610170",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2021-03-22 13:37:51.610170",
+ "modified_by": "Administrator",
+ "module": "Agency Management",
+ "name": "quotation-report",
+ "owner": "Administrator",
+ "page_name": "Quotation Report",
+ "roles": [
+  {
+   "role": "Administrator"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Quotation Report"
+}
